@@ -61,12 +61,18 @@ function openProductDetailAside(id) {
       prod = product
     }
   });
+  cleanProducts();
   createProduct(prod);
 }
 
 
 function closeProductDetailAside() {
   productDetailContainer.classList.add('inactive');
+}
+
+function cleanProducts() {
+  let productContainer = document.querySelector('.product-container');
+  productContainer.innerHTML = ""
 }
 
 function createProduct(product) {
